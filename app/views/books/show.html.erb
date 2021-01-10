@@ -2,4 +2,4 @@
 <p>body:<%= @book.body %></p>
 
 <%= link_to "編集", books_path(@book) %>
-<a href="#">削除</a>
+<%= link_to "削除", new_book_path(@book), method: :delete %>
