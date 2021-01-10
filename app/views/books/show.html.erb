@@ -1,2 +1,5 @@
-<h1>詳細</h1>
-<p>Find me in app/views/books/show.html.erb</p>
+<p>title:<%= @book.title %></p>
+<p>body:<%= @book.body %></p>
+
+<%= link_to "編集", books_path(@book) %>
+<a href="#">削除</a>
