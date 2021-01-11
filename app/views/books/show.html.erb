@@ -1,8 +1,9 @@
 <%= flash[:notice] %>
 
+<%= form_with model:@book, local: true do |f| %>
+  <p>title:<%= @book.title %></p>
+  <p>body:<%= @book.body %></p>
 
-<p>title:<%= @book.title %></p>
-<p>body:<%= @book.body %></p>
-
-<%= link_to "Edit", edit_book_path(@book) %> |
-<%= link_to "Back", books_path(@book) %>
+  <%= link_to "Edit", edit_book_path(@book) %> |
+  <%= link_to "Back", books_path(@book) %>
+<% end %>
